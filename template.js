@@ -191,11 +191,13 @@ function setupAnswers() {
 	bfls('.answer .answer ul').addClass('list-unstyled');
 	
 	bfls('.answer .answer ul').each(function(index) {
-		if (bfls('.answer .answer ul').eq(index).children('li').length < 13) {
-			columnWidth = Math.floor(12/bfls('.answer .answer ul').eq(index).children('li').length);
-		} else {
-			columnWidth = 12;		
-		}
+    // if (bfls('.answer .answer ul').eq(index).children('li').length < 13) {
+    //   columnWidth = Math.floor(12/bfls('.answer .answer ul').eq(index).children('li').length);
+    // } else {
+    //   columnWidth = 12;
+    // }
+    
+		columnWidth = 12;
 		
 		bfls('.answer .answer ul').eq(index).children().wrapAll('<div class="row"></div>');
 		bfls('.answer .answer ul').eq(index).children('div').children('li').wrap('<div class="col-md-'+ columnWidth +'"></div>');	
